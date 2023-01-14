@@ -1,0 +1,274 @@
+:root {
+    --bg_main: #5a86ca;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #da425b;
+    --darkred: #e0334dd3;
+    --orange: #ff8c00;
+    --green: #44f625be;
+    font-family:'Arial Narrow Bold', sans-serif;
+  
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  h5 {
+    margin-top: .5rem;
+    font-weight: 600;
+  }
+   
+  
+   
+  button,
+  input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    color: var(--text_dark);
+    padding: 100px;
+    background-size: cover;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+#delete-btn {
+  position: absolute;
+  margin: 2rem 0 0 auto;
+  color: white;
+  background: var(--red);
+  font-weight: bold;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 18px;
+  left: 90%;
+  bottom: 95%;
+  transition: background 0.15s ease-in-out;
+}  
+
+#delete-btn:hover {
+  background: var(--darkred);
+}
+
+  .top-banner {
+    color: var(--text_light);
+  }
+  
+  .heading {
+    display: flex;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+    justify-content: center;
+  }
+  
+  .top-banner form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .top-banner form input {
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+  }
+  
+  .top-banner form input::placeholder {
+    color: currentColor; 
+  }
+  
+  .top-banner form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    transition: background 0.15s ease-in-out;
+  }
+  
+  .top-banner form button:hover {
+    background: var(--green);
+  }
+
+  
+  
+  .top-banner form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+  }
+  
+
+  .ajax-section {
+    margin: 60px 0 20px;
+  }
+  
+  .ajax-section .cities {
+    display: grid;
+    grid-gap: 2rem 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .ajax-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+  }
+  
+  .ajax-section .city::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -.4rem;
+    left: .4rem;
+    z-index: -1;
+    opacity: 0.4;
+    border: 1px solid var(--text_med);
+    border-radius: 20px;
+    background: var(--text_light);
+  }
+  
+  .ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .ajax-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+  }
+  
+  .ajax-section .city sup {
+    font-size: 0.5em;
+  }
+  
+  .ajax-section .city-name sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+  }
+  
+  .ajax-section .city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  figure {
+    margin-bottom: 2rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    body {
+      padding: 30px;
+    }
+    
+    .ajax-section .cities {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .heading,
+    .ajax-section .city-temp {
+      font-size: 3rem;
+    }
+    
+    .ajax-section {
+      margin-top: 20px;
+    }
+    
+    .top-banner form {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .top-banner form input,
+    .top-banner form button {
+      width: 100%;
+    }
+  
+    .top-banner form button {
+      margin: 20px 0 0 0;
+    }
+    
+    .top-banner form .msg {
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
+    }
+  
+    .ajax-section .cities {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    body {
+      padding: 15px;
+
+    }
+    
+    .ajax-section .cities {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  
+  
+  
+  
+ 
+  
+  
+  
