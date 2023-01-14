@@ -32,9 +32,7 @@
     font-weight: 600;
   }
    
-  input {
-    -webkit-appearance: none;
-  }
+  
    
   button,
   input {
@@ -55,9 +53,9 @@
   }
   
   body {
-    background: var(--bg_main);
     color: var(--text_dark);
-    padding: 70px;
+    padding: 100px;
+    background-size: cover;
   }
   
   .container {
@@ -169,8 +167,8 @@
     bottom: -.4rem;
     left: .4rem;
     z-index: -1;
-    opacity: 0.3;
-    border: 2px solid var(--text_med);
+    opacity: 0.4;
+    border: 1px solid var(--text_med);
     border-radius: 20px;
     background: var(--text_light);
   }
@@ -258,12 +256,15 @@
   @media screen and (max-width: 500px) {
     body {
       padding: 15px;
+
     }
     
     .ajax-section .cities {
       grid-template-columns: repeat(1, 1fr);
     }
   }
+
+  
   
   
   

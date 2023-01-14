@@ -3,6 +3,16 @@ const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 const apiKey = "efc3fddb379c5b29ac6dc5213bd13bc6";
+const currentTime = new Date().getHours();
+
+if (document.body) {
+    if (7 <= currentTime && currentTime < 24) {
+        document.body.background = "img/day.png";
+    }
+    else {
+        document.body.background = "img/night.png";
+    }
+}
 
 form.addEventListener("submit", e => {
   e.preventDefault();
